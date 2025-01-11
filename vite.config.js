@@ -11,6 +11,10 @@ export default defineConfig({
     },
   },
   server: {
-    port: 3000, // Use the PORT environment variable, or default to 3000
+    port: 8080,
+    host: true,  // Use the PORT environment variable, or default to 3000
+  },
+  define: {
+    global: "window", // Ensure "global" is polyfilled for browser environments
   },
 })
